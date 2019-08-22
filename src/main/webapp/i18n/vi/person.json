@@ -1,0 +1,51 @@
+{
+  "vnsdinternalApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "createLabel": "Thêm mới một Person",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Person",
+        "notFound": "No People found"
+      },
+      "created": "Một Person mới được tạo với định danh {{ param }}",
+      "updated": "Một Person cập nhật với định danh {{ param }}",
+      "deleted": "Một Person đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "uuid": "Uuid",
+      "permalink": "Permalink",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "alsoknownas": "Alsoknownas",
+      "bio": "Bio",
+      "profileimageid": "Profileimageid",
+      "roleinvestor": "Roleinvestor",
+      "bornon": "Bornon",
+      "bornontrustcode": "Bornontrustcode",
+      "diedon": "Diedon",
+      "diedontrustcode": "Diedontrustcode",
+      "createdat": "Createdat",
+      "updatedat": "Updatedat",
+      "permalinkaliases": "Permalinkaliases",
+      "gender": "Gender",
+      "rank": "Rank",
+      "primaryaffiliationid": "Primaryaffiliationid",
+      "primarylocationid": "Primarylocationid",
+      "primaryimageid": "Primaryimageid",
+      "title": "Title",
+      "homepageurl": "Homepageurl",
+      "facebookurl": "Facebookurl",
+      "twitterurl": "Twitterurl",
+      "linkedinurl": "Linkedinurl",
+      "cityname": "Cityname",
+      "regionname": "Regionname",
+      "countrycode": "Countrycode",
+      "organization": "Organization",
+      "organizationEmployee": "Organization Employee"
+    }
+  }
+}

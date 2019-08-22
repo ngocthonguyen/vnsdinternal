@@ -1,0 +1,268 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-organization-heading" jhiTranslate="vnsdinternalApp.organization.home.createOrEditLabel">Create or edit a Organization</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.uuid" for="field_uuid">Uuid</label>
+                    <input type="text" class="form-control" name="uuid" id="field_uuid"
+                           formControlName="uuid"/>
+                    <div *ngIf="editForm.get('uuid').invalid && (editForm.get('uuid').dirty || editForm.get('uuid').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uuid').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.permalink" for="field_permalink">Permalink</label>
+                    <input type="text" class="form-control" name="permalink" id="field_permalink"
+                           formControlName="permalink"/>
+                    <div *ngIf="editForm.get('permalink').invalid && (editForm.get('permalink').dirty || editForm.get('permalink').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('permalink').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.alsoknownas" for="field_alsoknownas">Alsoknownas</label>
+                    <input type="text" class="form-control" name="alsoknownas" id="field_alsoknownas"
+                           formControlName="alsoknownas"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.shortdescription" for="field_shortdescription">Shortdescription</label>
+                    <input type="text" class="form-control" name="shortdescription" id="field_shortdescription"
+                           formControlName="shortdescription"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.profileimageid" for="field_profileimageid">Profileimageid</label>
+                    <input type="number" class="form-control" name="profileimageid" id="field_profileimageid"
+                           formControlName="profileimageid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.primaryrole" for="field_primaryrole">Primaryrole</label>
+                    <input type="text" class="form-control" name="primaryrole" id="field_primaryrole"
+                           formControlName="primaryrole"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.rolecompany" for="field_rolecompany">Rolecompany</label>
+                    <input type="checkbox" class="form-control" name="rolecompany" id="field_rolecompany"
+                           formControlName="rolecompany"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.roleinvestor" for="field_roleinvestor">Roleinvestor</label>
+                    <input type="checkbox" class="form-control" name="roleinvestor" id="field_roleinvestor"
+                           formControlName="roleinvestor"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.rolegroup" for="field_rolegroup">Rolegroup</label>
+                    <input type="checkbox" class="form-control" name="rolegroup" id="field_rolegroup"
+                           formControlName="rolegroup"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.roleschool" for="field_roleschool">Roleschool</label>
+                    <input type="checkbox" class="form-control" name="roleschool" id="field_roleschool"
+                           formControlName="roleschool"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.foundedon" for="field_foundedon">Foundedon</label>
+                    <div class="d-flex">
+                        <input id="field_foundedon" type="datetime-local" class="form-control" name="foundedon" formControlName="foundedon" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.foundedontrustcode" for="field_foundedontrustcode">Foundedontrustcode</label>
+                    <input type="number" class="form-control" name="foundedontrustcode" id="field_foundedontrustcode"
+                           formControlName="foundedontrustcode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.closedon" for="field_closedon">Closedon</label>
+                    <div class="d-flex">
+                        <input id="field_closedon" type="datetime-local" class="form-control" name="closedon" formControlName="closedon" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.closedontrustcode" for="field_closedontrustcode">Closedontrustcode</label>
+                    <input type="number" class="form-control" name="closedontrustcode" id="field_closedontrustcode"
+                           formControlName="closedontrustcode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.numemployeesmin" for="field_numemployeesmin">Numemployeesmin</label>
+                    <input type="number" class="form-control" name="numemployeesmin" id="field_numemployeesmin"
+                           formControlName="numemployeesmin"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.numemployeesmax" for="field_numemployeesmax">Numemployeesmax</label>
+                    <input type="number" class="form-control" name="numemployeesmax" id="field_numemployeesmax"
+                           formControlName="numemployeesmax"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.totalfundingusd" for="field_totalfundingusd">Totalfundingusd</label>
+                    <input type="number" class="form-control" name="totalfundingusd" id="field_totalfundingusd"
+                           formControlName="totalfundingusd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.totalfundingvnd" for="field_totalfundingvnd">Totalfundingvnd</label>
+                    <input type="number" class="form-control" name="totalfundingvnd" id="field_totalfundingvnd"
+                           formControlName="totalfundingvnd"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.stockexchange" for="field_stockexchange">Stockexchange</label>
+                    <input type="text" class="form-control" name="stockexchange" id="field_stockexchange"
+                           formControlName="stockexchange"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.stocksymbol" for="field_stocksymbol">Stocksymbol</label>
+                    <input type="text" class="form-control" name="stocksymbol" id="field_stocksymbol"
+                           formControlName="stocksymbol"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.numberofinvestments" for="field_numberofinvestments">Numberofinvestments</label>
+                    <input type="number" class="form-control" name="numberofinvestments" id="field_numberofinvestments"
+                           formControlName="numberofinvestments"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.createdat" for="field_createdat">Createdat</label>
+                    <div class="d-flex">
+                        <input id="field_createdat" type="datetime-local" class="form-control" name="createdat" formControlName="createdat" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.updatedat" for="field_updatedat">Updatedat</label>
+                    <div class="d-flex">
+                        <input id="field_updatedat" type="datetime-local" class="form-control" name="updatedat" formControlName="updatedat" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.permalinkaliases" for="field_permalinkaliases">Permalinkaliases</label>
+                    <input type="text" class="form-control" name="permalinkaliases" id="field_permalinkaliases"
+                           formControlName="permalinkaliases"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.investortype" for="field_investortype">Investortype</label>
+                    <input type="text" class="form-control" name="investortype" id="field_investortype"
+                           formControlName="investortype"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.contactemail" for="field_contactemail">Contactemail</label>
+                    <input type="text" class="form-control" name="contactemail" id="field_contactemail"
+                           formControlName="contactemail"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.phonenumber" for="field_phonenumber">Phonenumber</label>
+                    <input type="text" class="form-control" name="phonenumber" id="field_phonenumber"
+                           formControlName="phonenumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.rank" for="field_rank">Rank</label>
+                    <input type="number" class="form-control" name="rank" id="field_rank"
+                           formControlName="rank"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.primaryimageid" for="field_primaryimageid">Primaryimageid</label>
+                    <input type="number" class="form-control" name="primaryimageid" id="field_primaryimageid"
+                           formControlName="primaryimageid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.ownedbyid" for="field_ownedbyid">Ownedbyid</label>
+                    <input type="number" class="form-control" name="ownedbyid" id="field_ownedbyid"
+                           formControlName="ownedbyid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.headquartersid" for="field_headquartersid">Headquartersid</label>
+                    <input type="number" class="form-control" name="headquartersid" id="field_headquartersid"
+                           formControlName="headquartersid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.acquiredbyid" for="field_acquiredbyid">Acquiredbyid</label>
+                    <input type="number" class="form-control" name="acquiredbyid" id="field_acquiredbyid"
+                           formControlName="acquiredbyid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.ipoid" for="field_ipoid">Ipoid</label>
+                    <input type="number" class="form-control" name="ipoid" id="field_ipoid"
+                           formControlName="ipoid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.domain" for="field_domain">Domain</label>
+                    <input type="text" class="form-control" name="domain" id="field_domain"
+                           formControlName="domain"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.homepageurl" for="field_homepageurl">Homepageurl</label>
+                    <input type="text" class="form-control" name="homepageurl" id="field_homepageurl"
+                           formControlName="homepageurl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.facebookurl" for="field_facebookurl">Facebookurl</label>
+                    <input type="text" class="form-control" name="facebookurl" id="field_facebookurl"
+                           formControlName="facebookurl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.twitterurl" for="field_twitterurl">Twitterurl</label>
+                    <input type="text" class="form-control" name="twitterurl" id="field_twitterurl"
+                           formControlName="twitterurl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.linkedinurl" for="field_linkedinurl">Linkedinurl</label>
+                    <input type="text" class="form-control" name="linkedinurl" id="field_linkedinurl"
+                           formControlName="linkedinurl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.cityname" for="field_cityname">Cityname</label>
+                    <input type="text" class="form-control" name="cityname" id="field_cityname"
+                           formControlName="cityname"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.regionname" for="field_regionname">Regionname</label>
+                    <input type="text" class="form-control" name="regionname" id="field_regionname"
+                           formControlName="regionname"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.countrycode" for="field_countrycode">Countrycode</label>
+                    <input type="text" class="form-control" name="countrycode" id="field_countrycode"
+                           formControlName="countrycode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="vnsdinternalApp.organization.organizationEmployee" for="field_organizationEmployee">Organization Employee</label>
+                    <select class="form-control" id="field_organizationEmployee" name="organizationEmployee" formControlName="organizationEmployee">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="organizationEmployeeOption.id === editForm.get('organizationEmployee').value?.id ? editForm.get('organizationEmployee').value : organizationEmployeeOption" *ngFor="let organizationEmployeeOption of organizationemployees; trackBy: trackOrganizationEmployeeById">{{organizationEmployeeOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

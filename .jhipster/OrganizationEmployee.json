@@ -1,0 +1,32 @@
+{
+    "name": "OrganizationEmployee",
+    "fields": [
+        {
+            "fieldName": "role",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "organization",
+            "otherEntityRelationshipName": "organizationEmployee",
+            "relationshipName": "organization"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "person",
+            "otherEntityRelationshipName": "organizationEmployee",
+            "relationshipName": "person"
+        }
+    ],
+    "changelogDate": "20190822202217",
+    "entityTableName": "organization_employee",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

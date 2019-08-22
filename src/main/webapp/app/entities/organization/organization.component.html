@@ -1,0 +1,147 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="vnsdinternalApp.organization.home.title">Organizations</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-organization" [routerLink]="['/organization/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="vnsdinternalApp.organization.home.createLabel">
+            Create a new Organization
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="organizations?.length === 0">
+        <span jhiTranslate="vnsdinternalApp.organization.home.notFound">No organizations found</span>
+    </div>
+    <div class="table-responsive" *ngIf="organizations?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.uuid">Uuid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.permalink">Permalink</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.name">Name</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.alsoknownas">Alsoknownas</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.shortdescription">Shortdescription</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.description">Description</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.profileimageid">Profileimageid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.primaryrole">Primaryrole</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.rolecompany">Rolecompany</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.roleinvestor">Roleinvestor</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.rolegroup">Rolegroup</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.roleschool">Roleschool</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.foundedon">Foundedon</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.foundedontrustcode">Foundedontrustcode</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.closedon">Closedon</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.closedontrustcode">Closedontrustcode</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.numemployeesmin">Numemployeesmin</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.numemployeesmax">Numemployeesmax</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.totalfundingusd">Totalfundingusd</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.totalfundingvnd">Totalfundingvnd</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.stockexchange">Stockexchange</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.stocksymbol">Stocksymbol</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.numberofinvestments">Numberofinvestments</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.createdat">Createdat</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.updatedat">Updatedat</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.permalinkaliases">Permalinkaliases</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.investortype">Investortype</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.contactemail">Contactemail</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.phonenumber">Phonenumber</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.rank">Rank</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.primaryimageid">Primaryimageid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.ownedbyid">Ownedbyid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.headquartersid">Headquartersid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.acquiredbyid">Acquiredbyid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.ipoid">Ipoid</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.domain">Domain</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.homepageurl">Homepageurl</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.facebookurl">Facebookurl</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.twitterurl">Twitterurl</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.linkedinurl">Linkedinurl</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.cityname">Cityname</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.regionname">Regionname</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.countrycode">Countrycode</span></th>
+            <th><span jhiTranslate="vnsdinternalApp.organization.organizationEmployee">Organization Employee</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let organization of organizations ;trackBy: trackId">
+                <td><a [routerLink]="['/organization', organization.id, 'view' ]">{{organization.id}}</a></td>
+                <td>{{organization.uuid}}</td>
+                <td>{{organization.permalink}}</td>
+                <td>{{organization.name}}</td>
+                <td>{{organization.alsoknownas}}</td>
+                <td>{{organization.shortdescription}}</td>
+                <td>{{organization.description}}</td>
+                <td>{{organization.profileimageid}}</td>
+                <td>{{organization.primaryrole}}</td>
+                <td>{{organization.rolecompany}}</td>
+                <td>{{organization.roleinvestor}}</td>
+                <td>{{organization.rolegroup}}</td>
+                <td>{{organization.roleschool}}</td>
+                <td>{{organization.foundedon | date:'medium'}}</td>
+                <td>{{organization.foundedontrustcode}}</td>
+                <td>{{organization.closedon | date:'medium'}}</td>
+                <td>{{organization.closedontrustcode}}</td>
+                <td>{{organization.numemployeesmin}}</td>
+                <td>{{organization.numemployeesmax}}</td>
+                <td>{{organization.totalfundingusd}}</td>
+                <td>{{organization.totalfundingvnd}}</td>
+                <td>{{organization.stockexchange}}</td>
+                <td>{{organization.stocksymbol}}</td>
+                <td>{{organization.numberofinvestments}}</td>
+                <td>{{organization.createdat | date:'medium'}}</td>
+                <td>{{organization.updatedat | date:'medium'}}</td>
+                <td>{{organization.permalinkaliases}}</td>
+                <td>{{organization.investortype}}</td>
+                <td>{{organization.contactemail}}</td>
+                <td>{{organization.phonenumber}}</td>
+                <td>{{organization.rank}}</td>
+                <td>{{organization.primaryimageid}}</td>
+                <td>{{organization.ownedbyid}}</td>
+                <td>{{organization.headquartersid}}</td>
+                <td>{{organization.acquiredbyid}}</td>
+                <td>{{organization.ipoid}}</td>
+                <td>{{organization.domain}}</td>
+                <td>{{organization.homepageurl}}</td>
+                <td>{{organization.facebookurl}}</td>
+                <td>{{organization.twitterurl}}</td>
+                <td>{{organization.linkedinurl}}</td>
+                <td>{{organization.cityname}}</td>
+                <td>{{organization.regionname}}</td>
+                <td>{{organization.countrycode}}</td>
+                <td>
+                    <div *ngIf="organization.organizationEmployee">
+                        <a [routerLink]="['/organization-employee', organization.organizationEmployee?.id, 'view' ]" >{{organization.organizationEmployee?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/organization', organization.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/organization', organization.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/organization', { outlets: { popup: organization.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
