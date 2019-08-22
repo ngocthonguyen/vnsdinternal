@@ -1,0 +1,201 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="organization">
+            <h2><span jhiTranslate="vnsdinternalApp.organization.detail.title">Organization</span> {{organization.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="vnsdinternalApp.organization.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{organization.uuid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.permalink">Permalink</span></dt>
+                <dd>
+                    <span>{{organization.permalink}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.name">Name</span></dt>
+                <dd>
+                    <span>{{organization.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.alsoknownas">Alsoknownas</span></dt>
+                <dd>
+                    <span>{{organization.alsoknownas}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.shortdescription">Shortdescription</span></dt>
+                <dd>
+                    <span>{{organization.shortdescription}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.description">Description</span></dt>
+                <dd>
+                    <span>{{organization.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.profileimageid">Profileimageid</span></dt>
+                <dd>
+                    <span>{{organization.profileimageid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.primaryrole">Primaryrole</span></dt>
+                <dd>
+                    <span>{{organization.primaryrole}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.rolecompany">Rolecompany</span></dt>
+                <dd>
+                    <span>{{organization.rolecompany}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.roleinvestor">Roleinvestor</span></dt>
+                <dd>
+                    <span>{{organization.roleinvestor}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.rolegroup">Rolegroup</span></dt>
+                <dd>
+                    <span>{{organization.rolegroup}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.roleschool">Roleschool</span></dt>
+                <dd>
+                    <span>{{organization.roleschool}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.foundedon">Foundedon</span></dt>
+                <dd>
+                    <span>{{organization.foundedon}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.foundedontrustcode">Foundedontrustcode</span></dt>
+                <dd>
+                    <span>{{organization.foundedontrustcode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.closedon">Closedon</span></dt>
+                <dd>
+                    <span>{{organization.closedon}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.closedontrustcode">Closedontrustcode</span></dt>
+                <dd>
+                    <span>{{organization.closedontrustcode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.numemployeesmin">Numemployeesmin</span></dt>
+                <dd>
+                    <span>{{organization.numemployeesmin}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.numemployeesmax">Numemployeesmax</span></dt>
+                <dd>
+                    <span>{{organization.numemployeesmax}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.totalfundingusd">Totalfundingusd</span></dt>
+                <dd>
+                    <span>{{organization.totalfundingusd}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.totalfundingvnd">Totalfundingvnd</span></dt>
+                <dd>
+                    <span>{{organization.totalfundingvnd}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.stockexchange">Stockexchange</span></dt>
+                <dd>
+                    <span>{{organization.stockexchange}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.stocksymbol">Stocksymbol</span></dt>
+                <dd>
+                    <span>{{organization.stocksymbol}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.numberofinvestments">Numberofinvestments</span></dt>
+                <dd>
+                    <span>{{organization.numberofinvestments}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.createdat">Createdat</span></dt>
+                <dd>
+                    <span>{{organization.createdat}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.updatedat">Updatedat</span></dt>
+                <dd>
+                    <span>{{organization.updatedat}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.permalinkaliases">Permalinkaliases</span></dt>
+                <dd>
+                    <span>{{organization.permalinkaliases}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.investortype">Investortype</span></dt>
+                <dd>
+                    <span>{{organization.investortype}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.contactemail">Contactemail</span></dt>
+                <dd>
+                    <span>{{organization.contactemail}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.phonenumber">Phonenumber</span></dt>
+                <dd>
+                    <span>{{organization.phonenumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.rank">Rank</span></dt>
+                <dd>
+                    <span>{{organization.rank}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.primaryimageid">Primaryimageid</span></dt>
+                <dd>
+                    <span>{{organization.primaryimageid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.ownedbyid">Ownedbyid</span></dt>
+                <dd>
+                    <span>{{organization.ownedbyid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.headquartersid">Headquartersid</span></dt>
+                <dd>
+                    <span>{{organization.headquartersid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.acquiredbyid">Acquiredbyid</span></dt>
+                <dd>
+                    <span>{{organization.acquiredbyid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.ipoid">Ipoid</span></dt>
+                <dd>
+                    <span>{{organization.ipoid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.domain">Domain</span></dt>
+                <dd>
+                    <span>{{organization.domain}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.homepageurl">Homepageurl</span></dt>
+                <dd>
+                    <span>{{organization.homepageurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.facebookurl">Facebookurl</span></dt>
+                <dd>
+                    <span>{{organization.facebookurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.twitterurl">Twitterurl</span></dt>
+                <dd>
+                    <span>{{organization.twitterurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.linkedinurl">Linkedinurl</span></dt>
+                <dd>
+                    <span>{{organization.linkedinurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.cityname">Cityname</span></dt>
+                <dd>
+                    <span>{{organization.cityname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.regionname">Regionname</span></dt>
+                <dd>
+                    <span>{{organization.regionname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.countrycode">Countrycode</span></dt>
+                <dd>
+                    <span>{{organization.countrycode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.organization.organizationEmployee">Organization Employee</span></dt>
+                <dd>
+                    <div *ngIf="organization.organizationEmployee">
+                        <a [routerLink]="['/organization-employee', organization.organizationEmployee?.id, 'view']">{{organization.organizationEmployee?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/organization', organization.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

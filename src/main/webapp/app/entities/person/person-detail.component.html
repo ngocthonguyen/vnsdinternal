@@ -1,0 +1,147 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="person">
+            <h2><span jhiTranslate="vnsdinternalApp.person.detail.title">Person</span> {{person.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="vnsdinternalApp.person.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{person.uuid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.permalink">Permalink</span></dt>
+                <dd>
+                    <span>{{person.permalink}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.firstname">Firstname</span></dt>
+                <dd>
+                    <span>{{person.firstname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.lastname">Lastname</span></dt>
+                <dd>
+                    <span>{{person.lastname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.alsoknownas">Alsoknownas</span></dt>
+                <dd>
+                    <span>{{person.alsoknownas}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.bio">Bio</span></dt>
+                <dd>
+                    <span>{{person.bio}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.profileimageid">Profileimageid</span></dt>
+                <dd>
+                    <span>{{person.profileimageid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.roleinvestor">Roleinvestor</span></dt>
+                <dd>
+                    <span>{{person.roleinvestor}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.bornon">Bornon</span></dt>
+                <dd>
+                    <span>{{person.bornon}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.bornontrustcode">Bornontrustcode</span></dt>
+                <dd>
+                    <span>{{person.bornontrustcode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.diedon">Diedon</span></dt>
+                <dd>
+                    <span>{{person.diedon}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.diedontrustcode">Diedontrustcode</span></dt>
+                <dd>
+                    <span>{{person.diedontrustcode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.createdat">Createdat</span></dt>
+                <dd>
+                    <span>{{person.createdat}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.updatedat">Updatedat</span></dt>
+                <dd>
+                    <span>{{person.updatedat}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.permalinkaliases">Permalinkaliases</span></dt>
+                <dd>
+                    <span>{{person.permalinkaliases}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.gender">Gender</span></dt>
+                <dd>
+                    <span>{{person.gender}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.rank">Rank</span></dt>
+                <dd>
+                    <span>{{person.rank}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.primaryaffiliationid">Primaryaffiliationid</span></dt>
+                <dd>
+                    <span>{{person.primaryaffiliationid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.primarylocationid">Primarylocationid</span></dt>
+                <dd>
+                    <span>{{person.primarylocationid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.primaryimageid">Primaryimageid</span></dt>
+                <dd>
+                    <span>{{person.primaryimageid}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.title">Title</span></dt>
+                <dd>
+                    <span>{{person.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.homepageurl">Homepageurl</span></dt>
+                <dd>
+                    <span>{{person.homepageurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.facebookurl">Facebookurl</span></dt>
+                <dd>
+                    <span>{{person.facebookurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.twitterurl">Twitterurl</span></dt>
+                <dd>
+                    <span>{{person.twitterurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.linkedinurl">Linkedinurl</span></dt>
+                <dd>
+                    <span>{{person.linkedinurl}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.cityname">Cityname</span></dt>
+                <dd>
+                    <span>{{person.cityname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.regionname">Regionname</span></dt>
+                <dd>
+                    <span>{{person.regionname}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.countrycode">Countrycode</span></dt>
+                <dd>
+                    <span>{{person.countrycode}}</span>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.organization">Organization</span></dt>
+                <dd>
+                    <div *ngIf="person.organization">
+                        <a [routerLink]="['/organization', person.organization?.id, 'view']">{{person.organization?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="vnsdinternalApp.person.organizationEmployee">Organization Employee</span></dt>
+                <dd>
+                    <div *ngIf="person.organizationEmployee">
+                        <a [routerLink]="['/organization-employee', person.organizationEmployee?.id, 'view']">{{person.organizationEmployee?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/person', person.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

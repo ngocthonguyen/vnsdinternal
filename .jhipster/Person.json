@@ -1,0 +1,152 @@
+{
+    "name": "Person",
+    "fields": [
+        {
+            "fieldName": "uuid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "permalink",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "alsoknownas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "profileimageid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "roleinvestor",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "bornon",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "bornontrustcode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "diedon",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "diedontrustcode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdat",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updatedat",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "permalinkaliases",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rank",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "primaryaffiliationid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "primarylocationid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "primaryimageid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "homepageurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facebookurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitterurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linkedinurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regionname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countrycode",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "organization",
+            "otherEntityName": "organization",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "organizationEmployee",
+            "otherEntityName": "organizationEmployee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190822202216",
+    "entityTableName": "person",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

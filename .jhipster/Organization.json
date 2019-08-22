@@ -1,0 +1,209 @@
+{
+    "name": "Organization",
+    "fields": [
+        {
+            "fieldName": "uuid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "permalink",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "alsoknownas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shortdescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "profileimageid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "primaryrole",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rolecompany",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "roleinvestor",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "rolegroup",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "roleschool",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "foundedon",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "foundedontrustcode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "closedon",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "closedontrustcode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "numemployeesmin",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "numemployeesmax",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "totalfundingusd",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "totalfundingvnd",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "stockexchange",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stocksymbol",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numberofinvestments",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdat",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updatedat",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "permalinkaliases",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "investortype",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactemail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phonenumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rank",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "primaryimageid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ownedbyid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "headquartersid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "acquiredbyid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ipoid",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "domain",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "homepageurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facebookurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitterurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linkedinurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "regionname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countrycode",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "person",
+            "otherEntityRelationshipName": "organization",
+            "relationshipName": "owner"
+        },
+        {
+            "relationshipName": "organizationEmployee",
+            "otherEntityName": "organizationEmployee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190822202215",
+    "entityTableName": "organization",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

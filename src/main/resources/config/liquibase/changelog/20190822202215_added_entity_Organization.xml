@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <!--
+        Added the entity Organization.
+    -->
+    <changeSet id="20190822202215-1" author="jhipster">
+        <createTable tableName="organization">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="uuid" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="permalink" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="alsoknownas" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="shortdescription" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="profileimageid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="primaryrole" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rolecompany" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="roleinvestor" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rolegroup" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="roleschool" type="boolean">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="foundedon" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="foundedontrustcode" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="closedon" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="closedontrustcode" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="numemployeesmin" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="numemployeesmax" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="totalfundingusd" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="totalfundingvnd" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="stockexchange" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="stocksymbol" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="numberofinvestments" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="createdat" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="updatedat" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="permalinkaliases" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="investortype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="contactemail" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="phonenumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rank" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="primaryimageid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ownedbyid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="headquartersid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="acquiredbyid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ipoid" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="domain" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="homepageurl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="facebookurl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="twitterurl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="linkedinurl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cityname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="regionname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="countrycode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="organization_employee_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+
+        <dropDefaultValue tableName="organization" columnName="foundedon" columnDataType="datetime"/>
+        <dropDefaultValue tableName="organization" columnName="closedon" columnDataType="datetime"/>
+        <dropDefaultValue tableName="organization" columnName="createdat" columnDataType="datetime"/>
+        <dropDefaultValue tableName="organization" columnName="updatedat" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20190822202215-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20190822202215-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/organization.csv"
+                  separator=";"
+                  tableName="organization">
+            <column name="id" type="numeric"/>
+            <column name="uuid" type="string"/>
+            <column name="permalink" type="string"/>
+            <column name="name" type="string"/>
+            <column name="alsoknownas" type="string"/>
+            <column name="shortdescription" type="string"/>
+            <column name="description" type="string"/>
+            <column name="profileimageid" type="numeric"/>
+            <column name="primaryrole" type="string"/>
+            <column name="rolecompany" type="boolean"/>
+            <column name="roleinvestor" type="boolean"/>
+            <column name="rolegroup" type="boolean"/>
+            <column name="roleschool" type="boolean"/>
+            <column name="foundedon" type="datetime"/>
+            <column name="foundedontrustcode" type="numeric"/>
+            <column name="closedon" type="datetime"/>
+            <column name="closedontrustcode" type="numeric"/>
+            <column name="numemployeesmin" type="numeric"/>
+            <column name="numemployeesmax" type="numeric"/>
+            <column name="totalfundingusd" type="numeric"/>
+            <column name="totalfundingvnd" type="numeric"/>
+            <column name="stockexchange" type="string"/>
+            <column name="stocksymbol" type="string"/>
+            <column name="numberofinvestments" type="numeric"/>
+            <column name="createdat" type="datetime"/>
+            <column name="updatedat" type="datetime"/>
+            <column name="permalinkaliases" type="string"/>
+            <column name="investortype" type="string"/>
+            <column name="contactemail" type="string"/>
+            <column name="phonenumber" type="string"/>
+            <column name="rank" type="numeric"/>
+            <column name="primaryimageid" type="numeric"/>
+            <column name="ownedbyid" type="numeric"/>
+            <column name="headquartersid" type="numeric"/>
+            <column name="acquiredbyid" type="numeric"/>
+            <column name="ipoid" type="numeric"/>
+            <column name="domain" type="string"/>
+            <column name="homepageurl" type="string"/>
+            <column name="facebookurl" type="string"/>
+            <column name="twitterurl" type="string"/>
+            <column name="linkedinurl" type="string"/>
+            <column name="cityname" type="string"/>
+            <column name="regionname" type="string"/>
+            <column name="countrycode" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
