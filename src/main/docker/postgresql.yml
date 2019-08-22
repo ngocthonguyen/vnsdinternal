@@ -1,0 +1,11 @@
+version: '2'
+services:
+  vnsdinternal-postgresql:
+    image: postgres:11.4
+    # volumes:
+    #     - ~/volumes/jhipster/vnsdinternal/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=vnsdinternal
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
