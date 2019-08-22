@@ -36,9 +36,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/vnsdinternal
-    username: vnsdinternal
-    password:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Passw0rd
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -56,10 +56,10 @@ spring:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: smtpin.biz.lodh.com
+    # port: 25
+    # username:
+    # password:
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
